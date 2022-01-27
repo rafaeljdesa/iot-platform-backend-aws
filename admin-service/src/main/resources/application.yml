@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: admin-service
+
+mongo:
+  server: ${MONGO_SERVER}
+  port: ${MONGO_PORT}
+  databaseName: ${MONGO_DATABASE_NAME}
+  userName: ${MONGO_USERNAME}
+  userPassword: ${MONGO_USERPASSWORD}
+  connectionString: mongodb://${mongo.userName}:${mongo.userPassword}@${mongo.server}:${mongo.port}/${mongo.databaseName}
+  basePackage: br.com.iotplatform.adminservice
